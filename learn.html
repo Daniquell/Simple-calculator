@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    <style>
+        #square{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background:green;
+            margin-bottom:30px;
+            margin-top:20px;
+        }
+        #square1{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background:rgb(0, 128, 85);
+            margin-bottom:30px;
+            margin-top:20px;
+        }
+        #square2{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background:rgb(70, 0, 128);
+            margin-bottom:30px;
+            margin-top:20px;
+        }
+        #square3{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background:rgb(128, 77, 0);
+            margin-bottom:30px;
+            margin-top:20px;
+        }
+        #square4{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background:rgb(28, 0, 128);
+            margin-bottom:30px;
+            margin-top:20px;
+        }
+        #square5{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background:rgb(128, 0, 0);
+            margin-bottom:30px;
+            margin-top:20px;
+        }
+        #square6{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background:rgb(128, 0, 100);
+            margin-bottom:30px;
+            margin-top:20px;
+        }
+        #square7{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background:rgb(0, 128, 100);
+            margin-bottom:30px;
+            margin-top:20px;
+        }
+        #square8{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background:rgb(0, 128, 128);
+            margin-bottom:30px;
+            margin-top:20px;
+        }
+        #square9{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background:rgb(0, 128, 79);
+            margin-bottom:30px;
+            margin-top:20px;
+        }
+    
+    </style>
+    <body>
+        
+            <div id="square" class="sq">1</div>
+            <div id="square1" class="sq1">2</div>
+            <div id="square2" class="sq2">3</div>
+            <div id="square3" class="sq3">4</div>
+            <div id="square4" class="sq4">5</div>
+            <div id="square5" class="sq5">6</div>
+            <div id="square6" class="sq6">7</div>
+            <div id="square7" class="sq7">8</div>
+            <div id="square8" class="sq8">9</div>
+            <div id="square9" class="sq9">10</div>
+        
+
+    <button id="button">Click</button>
+    </body>
+
+    <script>
+        /*button.onclick=function(){
+            alert("Hello world!");
+        }*/
+        button.addEventListener("click", changeElements);
+        function changeElements(){
+            /*let a;
+            a=document.getElementById("square").innerHTML;
+            document.getElementById("square").innerHTML=document.getElementById("square1").innerHTML;
+            document.getElementById("square1").innerHTML=a;*/
+//1
+            let d1=document.getElementById("square");
+	        let d2=document.getElementById("square1");
+
+	        let d11=d1.cloneNode(true);
+            let d22=d2.cloneNode(true);
+
+            d1.parentNode.insertBefore(d22,d1);
+            d2.parentNode.insertBefore(d11,d2);
+
+            d1.parentNode.removeChild(d1);
+            d2.parentNode.removeChild(d2);
+
+//2
+
+            let x1=document.getElementById("square2");
+            let x2=document.getElementById("square3");
+
+            let x3=x1.cloneNode(true);
+            let x4=x2.cloneNode(true);
+
+            x1.parentNode.insertBefore(x3,x2);
+            x2.parentNode.insertBefore(x4,x1);
+
+            x1.parentNode.removeChild(x1);
+            x2.parentNode.removeChild(x2);
+
+//3
+
+            let s1=document.getElementById("square4");
+            let s2=document.getElementById("square5");
+
+            let s3=s1.cloneNode(true);
+            let s4=s2.cloneNode(true);
+
+            s1.parentNode.insertBefore(s3,s2);
+            s2.parentNode.insertBefore(s4,s1);
+
+            s1.parentNode.removeChild(s1);
+            s2.parentNode.removeChild(s2);
+
+//4
+
+            let a1=document.getElementById("square6");
+            let a2=document.getElementById("square7");
+
+            let a3=a1.cloneNode("true");
+            let a4=a2.cloneNode("true");
+
+            a1.parentNode.insertBefore(a4,a1);
+            a2.parentNode.insertBefore(a3,a2);
+
+            a1.parentNode.removeChild(a1);
+            a2.parentNode.removeChild(a2);
+
+//5
+
+            let r1=document.getElementById("square8");
+            let r2=document.getElementById("square9");
+
+            let r3=r1.cloneNode(true);
+            let r4=r2.cloneNode(true);
+
+            r1.parentNode.insertBefore(r4,r1);//вставить r4 вместо r1
+            r2.parentNode.insertBefore(r3,r2);
+
+            r1.parentNode.removeChild(r1);
+            r2.parentNode.removeChild(r2);
+        }
+
+
+    </script>
+</html>
+
+
